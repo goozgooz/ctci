@@ -38,5 +38,3 @@
 console.log(isUnique([1,2,3]) === null);
 console.log(isUnique('hi bro sup') === true);
 console.log(isUnique('poop') === false);
-
-// module.exports = isUnique;
