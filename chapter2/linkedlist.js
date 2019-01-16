@@ -16,6 +16,16 @@ class LinkedList {
       }
     }
   }
+  
+  print() {
+    if (!this.head) return console.log('No Head Node');
+    
+    let current = this.head;
+    while (current) {
+      console.log(current.data);
+      current = current.next;
+    }
+  }
 }
 
 class Node {
