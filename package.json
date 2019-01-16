@@ -1,0 +1,23 @@
+{
+  "name": "ashkaan-ctci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^23.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goozgooz/ctci.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goozgooz/ctci/issues"
+  },
+  "homepage": "https://github.com/goozgooz/ctci#readme"
+}
