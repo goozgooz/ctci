@@ -5,7 +5,7 @@
  * How would you solve this problem if a temporary buffer is not allowed?
  */
  
-const {LinkedList, Node} = require('./linkedlist');
+const {LinkedList, Node} = require('../lib/linkedlist');
 
 function removeDupes(ll) {
   if (!ll.head) return null;

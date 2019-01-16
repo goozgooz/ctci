@@ -3,7 +3,7 @@
  * Return Kth to Last: Implement an algorithm to find the kth to last element of a singly linked list.
 **/
 
-const {LinkedList, Node} = require('./linkedlist');
+const {LinkedList, Node} = require('../lib/linkedlist');
 
 function removeKth(ll, k) {
   if (!ll.head) return;
