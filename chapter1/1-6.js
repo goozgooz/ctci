@@ -6,6 +6,9 @@
  * the original string. You can assume the string has only uppercase and lowercase letters (a - z).
  */
 
+// Time: O(n);
+// Space: O(n);
+
 function stringCompression(str) {
   let compressed = '';
   let count = 1;

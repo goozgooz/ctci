@@ -8,8 +8,8 @@
  * Output: True (permutations: "taco cat". "atco cta". etc.)
  */
  
- // Time: O(n)
- // Space: O(n)
+// Time: O(n)
+// Space: O(n)
  
 // function palPerm(str) {
 //   let chars = {};
