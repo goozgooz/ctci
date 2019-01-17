@@ -8,10 +8,6 @@
  
 const {LinkedList, Node} = require('../lib/linkedlist');
 
-LinkedList.prototype.insertNode = function(node) {
-  return this.head = node;
-};
-
 function intersect(ll1, ll2) {
   if (!ll1.head || !ll2.head) return false;
   let nodes1 = [];
@@ -60,14 +56,14 @@ n6.next = n7;
 n7.next = n8;
 
 let ll1 = new LinkedList();
-ll1.insertNode(n1);
+ll1.insertHeadNode(n1);
 
 let ll2 = new LinkedList();
-ll2.insertNode(n6);
+ll2.insertHeadNode(n6);
 
 
 console.log(intersect(ll1,ll2) === false);
 
 n8.next = n1;
 
-console.log('node returned', intersect(ll1,ll2));
+console.log(intersect(ll1,ll2) === n1);
