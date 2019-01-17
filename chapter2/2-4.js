@@ -11,15 +11,15 @@
 
 const {LinkedList, Node} = require('../lib/linkedlist');
 
-function partition(ll, x) {
-  if (!ll.head) return null;
+LinkedList.prototype.partition = function(x) {
+  if (!this.head) return null;
   
   let leftHead = null;
   let left = null;
   let rightHead = null;
   let right = null;
   
-  let current = ll.head;
+  let current = this.head;
   while (current) {
     if (current.data < x) {
       if (!leftHead) {
@@ -60,5 +60,5 @@ ll.insert(105);
 ll.print();
 
 console.log('-----');
-partition(ll, 50)
+ll.partition(50)
 ll.print();

@@ -5,12 +5,12 @@
 
 const {LinkedList, Node} = require('../lib/linkedlist');
 
-function removeKth(ll, k) {
-  if (!ll.head) return;
+LinkedList.prototype.removeKth = function(k) {
+  if (!this.head) return;
   
   let previous = null;
-  let slow = ll.head;
-  let fast = ll.head;
+  let slow = this.head;
+  let fast = this.head;
   
   for (let i = 1; i <= k; i++) {
     if (fast.next) {
@@ -23,7 +23,7 @@ function removeKth(ll, k) {
   while (fast) {
     if (!fast.next) {
       if (!previous) {
-        return ll.head = ll.head.next;
+        return this.head = this.head.next;
       } else {
         return previous.next = slow.next;
       }
@@ -40,5 +40,5 @@ ll.insert(1);
 ll.insert(2);
 ll.insert(3);
 ll.insert(4);
-removeKth(ll, 3);
+ll.removeKth(3)
 ll.print();

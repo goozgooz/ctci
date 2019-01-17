@@ -7,12 +7,12 @@
  
 const {LinkedList, Node} = require('../lib/linkedlist');
 
-function removeDupes(ll) {
-  if (!ll.head) return null;
+LinkedList.prototype.removeDupes = function() {
+  if (!this.head) return null;
   
   let nodes = {};
   let previous = null;
-  let current = ll.head;
+  let current = this.head;
   
   while (current) {
     if (nodes[current.data]) {
@@ -23,7 +23,7 @@ function removeDupes(ll) {
     }
     current = current.next;
   }
-  return ll;
+  return this;
 }
 
 const ll = new LinkedList();
@@ -34,5 +34,5 @@ ll.insert(4);
 ll.insert(2);
 ll.insert(2);
 ll.insert(1);
-removeDupes(ll);
+ll.removeDupes();
 ll.print();
