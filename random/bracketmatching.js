@@ -19,8 +19,8 @@ function isValid(str) {
   return !stack.length;
 };
 
-console.log(isValid("([)]") === false) // false
-console.log(isValid("()") === true) // true
+console.log(isValid("([)]") === false); // false
+console.log(isValid("()") === true); // true
 console.log(isValid("{}[]()") === true) // true
 console.log(isValid("{[}]") === false) // false
 console.log(isValid("{[}]") === false) // false
