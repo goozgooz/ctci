@@ -23,3 +23,8 @@ console.log(fib(0) === fibonacci[0]);
 console.log(fib(1) === fibonacci[1]);
 console.log(fib(3) === fibonacci[3]);
 console.log(fib(7) === fibonacci[7]);
+
+console.log(recursiveFib(0) === fibonacci[0]);
+console.log(recursiveFib(1) === fibonacci[1]);
+console.log(recursiveFib(3) === fibonacci[3]);
+console.log(recursiveFib(7) === fibonacci[7]);
