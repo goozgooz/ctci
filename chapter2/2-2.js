@@ -40,5 +40,5 @@ ll.insert(1);
 ll.insert(2);
 ll.insert(3);
 ll.insert(4);
-ll.removeKth(3)
+ll.removeKth(3);
 ll.print();
