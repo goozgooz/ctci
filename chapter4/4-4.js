@@ -7,6 +7,9 @@
 
 const BST = require('../lib/bst');
 
+// maxDepth and minDepth are O(n) - so calling them both is still O(n);
+// run time is O(n) - space complexity is linear O(1)
+
 function minDepth(bst) {
   if (!bst) return 0;
   return 1 + Math.min(minDepth(bst.left), minDepth(bst.right));

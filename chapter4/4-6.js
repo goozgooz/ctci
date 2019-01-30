@@ -11,45 +11,45 @@
  * binary search tree. You may assume that each node has a link to its parent.
 */
 
-// one with no parent link
-// one with parent link
+// NO LINK TO PARENT NODE
 
 const BST = require('../lib/bst');
 
-function findNode(bst, data) {
-  if (bst.data === data) return bst;
-  let subtree = data < bst.data ? 'left' : 'right';
-  if (bst[subtree]) {
-    return findNode(bst[subtree], data);
-  } else {
-    return null;
-  }
-}
-
-function getSuccessor(bst, data) {
-  let node = findNode(bst,data);
-  if (!node) return null;
+// function findNode(bst, data) {
+//   if (bst.data === data) return bst;
+//   let subtree = data < bst.data ? 'left' : 'right';
+//   if (bst[subtree]) {
+//     return findNode(bst[subtree], data);
+//   } else {
+//     return null;
+//   }
+// }
+// function getSuccessor(bst, data) {
+//   let node = findNode(bst,data);
+//   if (!node) return null;
   
-  if (node.right) {
-    let min = node.right;
-    while (min.left) {
-      min = min.left;
-    }
-    return min;
-  } else {
-    let successor = null;
-    let current = bst;
-    while (current !== node) {
-      if (node.data < bst.data) {
-        successor = current;
-        current = current.left;
-      } else {
-        current = current.right;
-      }
-    }
-    return successor;
-  }
-}
+//   if (node.right) {
+//     let min = node.right;
+//     while (min.left) {
+//       min = min.left;
+//     }
+//     return min;
+//   } else {
+//     let successor = null;
+//     let current = bst;
+//     while (current !== node) {
+//       if (node.data < current.data) {
+//         successor = current;
+//         current = current.left;
+//       } else {
+//         current = current.right;
+//       }
+//     }
+//     return successor;
+//   }
+// }
+
+
 
 let test = new BST(50);
 test.insert(60);
