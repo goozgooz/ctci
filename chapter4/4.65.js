@@ -7,22 +7,22 @@ var BSTp = function(value) {
 };
 
 function findSuccessor(node){
-	if (!node) return null;
-	if (node.right) {
-		let min = node;
-		while (min.left) {
-			min = min.left;
-		}
-		return min;
-	} else {
-		let current = node;
-		let p = node.parent;
-		while (p && p.left !== current) {
-			current = p;
-			p = p.parent;
-		} 
-		return p;	
-	}
+  if (!node) return null;
+  if (node.right) {
+    let min = node.right;
+    while (min.left) {
+      min = min.left;
+    }
+    return min;
+  } else {
+    let p = node.parent;
+    let n = node;
+    while (p && p.left !== n) {
+      n = p;
+      p = n.parent;
+    }
+    return p;
+  }
 }
 
 /* TEST */

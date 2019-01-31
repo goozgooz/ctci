@@ -49,19 +49,17 @@ const BST = require('../lib/bst');
 //   }
 // }
 
-
-
 let test = new BST(50);
 test.insert(60);
 test.insert(30);
 test.insert(35);
 test.insert(25);
 test.insert(80);
-test.insert(55)
-test.insert(58)
-test.insert(56)
-test.insert(84)
-test.insert(53)
+test.insert(55);
+test.insert(58);
+test.insert(56);
+test.insert(84);
+test.insert(53);
 test.insert(33);
 console.log(getSuccessor(test, 25).data === 30);
 console.log(getSuccessor(test, 10) === null);
