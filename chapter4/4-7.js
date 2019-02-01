@@ -14,8 +14,12 @@
  * Output: f, e, a, b, d, c
  */
  
- function buildGraph(projects, dependencies) {
+ //for every directed edge uv, vertex u comes before v in the ordering.
+ 
+
+function createGraph(projects, dependencies) {
 	let graph = {};
+	
 	for (let p of projects) {
 		graph[p] = {};
 	}
@@ -25,34 +29,32 @@
 	}
 
 	return graph;
-}	
+}
 
 function buildOrder(projects, dependencies) {
-	let graph = buildGraph(projects,dependencies);
+	let graph = createGraph(projects, dependencies);
+	let order = [];
 	let visited = {};
-	let stack = [];
-	console.log({graph})
+
 	for (let node in graph) {
 		if (!visited[node]) {
-			// console.log('normal node: ', node)
-			topSortUtil(node, visited, stack, graph);
+			topSort(node, order, visited, graph);
 		}
 	}
 
-	return stack;
+	return order;
 }
 
-function topSortUtil(node,visited,stack, graph) {
+function topSort(node, order, visited, graph) {
 	visited[node] = true;
-	// console.log('util node: ', node)
-	for (let child in graph[node]) {
-		if (!visited[child]) {
-			topSortUtil(child, visited, stack,graph);
+	for (let d in graph[node]) {
+		if (!visited[d]) {
+			topSort(d, order, visited, graph);
 		}
 	}
-	stack.push(node)
-	// console.log(stack);
+	order.unshift(node);
 }
+	
 
 
 const projects = ['a', 'b', 'c', 'd', 'e', 'f'];
