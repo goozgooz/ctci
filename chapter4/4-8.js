@@ -18,6 +18,17 @@ function lca(root, node1, node2) {
   return left ? left : right;
 }
 
+function findNode(root, data){
+  let q = [root];
+  while (q.length) {
+    let current = q.shift();
+    if (current.data === data) return true;
+    if (current.left) q.push(current.left);
+    if (current.right) q.push(current.right);
+  }
+  return false;
+}
+
 let A = new Node(3);
 let B = new Node(6);
 let C = new Node(8);
