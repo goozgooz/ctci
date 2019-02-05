@@ -12,17 +12,17 @@ const BST = require('../lib/bst');
 // make the left node of that a call to same function with start -> middle - 1
 // right is middle + 1 to end
 
-function createBST(arr, start = 0, end = arr.length-1) {
-  if (start > end) return;
+// function createBST(arr, start = 0, end = arr.length-1) {
+//   if (start > end) return;
 
-  let middle = Math.floor((start + end) / 2);
+//   let middle = Math.floor((start + end) / 2);
 
-  let root = new BST(arr[middle]);
-  root.left = createBST(arr, start, middle-1);
-  root.right = createBST(arr, middle+1, end);
+//   let root = new BST(arr[middle]);
+//   root.left = createBST(arr, start, middle-1);
+//   root.right = createBST(arr, middle+1, end);
 
-  return root;
-}
+//   return root;
+// }
 
 
 console.log(createBST([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));

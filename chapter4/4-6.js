@@ -49,6 +49,8 @@ const BST = require('../lib/bst');
 //   }
 // }
 
+
+
 let test = new BST(50);
 test.insert(60);
 test.insert(30);

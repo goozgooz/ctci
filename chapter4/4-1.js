@@ -28,38 +28,39 @@ class Graph {
     delete this.nodes[node][edge];
   }
 	
-  checkRoute(node1, node2) {
-    const q1 = [node1];
-    const visited1 = {[node1]: true};
+  // checkRoute(node1, node2) {
+  //   const q1 = [node1];
+  //   const visited1 = {[node1]: true};
 
-    const q2 = [node2];
-    const visited2 = {[node2]: true};
+  //   const q2 = [node2];
+  //   const visited2 = {[node2]: true};
 
-    while (q1.length || q2.length) {
-      if (q1.length) {
-        let current = q1.shift();
-        if (current === node2) return true;
-        for (let node in this.nodes[current]) {
-          if (!visited1[node]) {
-            visited1[node] = true;
-            q1.push(node);
-          }
-        }
-      }
+  //   while (q1.length || q2.length) {
+  //     if (q1.length) {
+  //       let current = q1.shift();
+  //       if (current === node2) return true;
+  //       for (let node in this.nodes[current]) {
+  //         if (!visited1[node]) {
+  //           visited1[node] = true;
+  //           q1.push(node);
+  //         }
+  //       }
+  //     }
 
-      if (q2.length) {
-        let current = q2.shift();
-        if (current === node1) return true;
-        for (let node in this.nodes[current]) {
-          if (!visited2[node]) {
-            visited2[node] = true;
-            q2.push(node);
-          }
-        }
-      }
-    }
-    return false;
-  }
+  //     if (q2.length) {
+  //       let current = q2.shift();
+  //       if (current === node1) return true;
+  //       for (let node in this.nodes[current]) {
+  //         if (!visited2[node]) {
+  //           visited2[node] = true;
+  //           q2.push(node);
+  //         }
+  //       }
+  //     }
+  //   }
+  //   return false;
+  // }
+  
 }
 
 let graph = new Graph();
