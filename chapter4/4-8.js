@@ -1,12 +1,5 @@
 // https://www.youtube.com/watch?v=13m9ZCB8gjw
 
-<<<<<<< HEAD
-// LCA binary tree
-function lca(root, node1, node2) {
-  if (!root) return null;
-  if (root === node1 || root === node2) return root;
-  let left = lca(root.left, node1 , node2);
-=======
 class Node {
   constructor(data) {
     this.data = data;
@@ -19,16 +12,12 @@ function lca(root, node1, node2) {
   if (!root) return null;
   if (root === node1 || root === node2) return root;
   let left = lca(root.left, node1, node2);
->>>>>>> 89be1cd7ab88177e32ff7cdd93077a49dc048f12
   let right = lca(root.right, node1, node2);
   if (left && right) return root;
   if (!left && !right) return null;
   return left ? left : right;
 }
 
-<<<<<<< HEAD
-
-=======
 function findNode(root, data){
   let q = [root];
   while (q.length) {
@@ -62,4 +51,3 @@ console.log(lca(A, B,C) === A);
 console.log(lca(A, D, G) === B);
 console.log(lca(A, C, I) === C);
 console.log(lca(A, D, H) === A);
->>>>>>> 89be1cd7ab88177e32ff7cdd93077a49dc048f12
