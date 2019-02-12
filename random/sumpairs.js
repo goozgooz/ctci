@@ -26,15 +26,31 @@
 // }
 
 
+// function sumPairs(arr, target) {
+// 	const pairs = [];
+// 	const map = {};
+
+// 	for (let num of arr) {
+// 		if (!map[num]) map[num] = true;
+// 		let pair = target - num;
+// 		if (map[pair]) pairs.push([num,pair]);
+// 	}
+// 	return pairs;
+// }
+
 function sumPairs(arr, target) {
-	const pairs = [];
-	const map = {};
+	let pairs = [];
+	let matches = {};
 
 	for (let num of arr) {
-		if (!map[num]) map[num] = true;
-		let pair = target - num;
-		if (map[pair]) pairs.push([num,pair]);
+		if (matches[num]) {
+			pairs.push([num, matches[num]]);
+		} else {
+			let compliment = target - num;
+			matches[compliment] = num;
+		}
 	}
+
 	return pairs;
 }
 
