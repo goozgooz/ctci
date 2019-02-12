@@ -8,25 +8,25 @@ const {LinkedList} = require('../lib/linkedlist');
 
 const BST = require('../lib/bst');
 
-function listOfDepths(bst) {
-  if (!bst.data) return null;
-  let lists = [new LinkedList()];
-  let q = [bst, 'end'];
+// function listOfDepths(bst) {
+//   if (!bst.data) return null;
+//   let lists = [new LinkedList()];
+//   let q = [bst, 'end'];
 	
-  while (q.length > 1) {
-    let current = q.shift();
-    if (current === 'end') {
-      lists.unshift(new LinkedList());
-      q.push(current);
-    } else {
-      lists[0].insert(current);
-      if (current.left) q.push(current.left);
-      if (current.right) q.push(current.right);
-    }
-  }
+//   while (q.length > 1) {
+//     let current = q.shift();
+//     if (current === 'end') {
+//       lists.unshift(new LinkedList());
+//       q.push(current);
+//     } else {
+//       lists[0].insert(current);
+//       if (current.left) q.push(current.left);
+//       if (current.right) q.push(current.right);
+//     }
+//   }
 
-  return lists;
-}
+//   return lists;
+// }
 
 let bst = new BST(50);
 bst.insert(40);
