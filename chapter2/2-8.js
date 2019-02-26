@@ -6,23 +6,23 @@
  
  const {LinkedList, Node} = require('../lib/linkedlist');
  
- function isCircular(ll) {
-   if (!ll.head) return false;
+ // function isCircular(ll) {
+ //   if (!ll.head) return false;
    
-   let slow = ll.head;
-   let fast = ll.head;
+ //   let slow = ll.head;
+ //   let fast = ll.head;
    
-   while (fast.next && fast.next.next) {
-     slow = slow.next;
-     fast = fast.next.next;
-     if (slow === fast) {
-       return slow.next;
-     }
-   }
+ //   while (fast.next && fast.next.next) {
+ //     slow = slow.next;
+ //     fast = fast.next.next;
+ //     if (slow === fast) {
+ //       return slow.next;
+ //     }
+ //   }
    
-   return false;
- }
- 
+ //   return false;
+ // }
+
 let ll = new LinkedList();
 let a = new Node(1);
 let b = new Node(2);

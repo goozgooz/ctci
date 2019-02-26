@@ -8,34 +8,48 @@
  
 const {LinkedList, Node} = require('../lib/linkedlist');
 
+function getLength(ll) {
+	let length = 0;
+	if (!ll.head) return length;
+	let current = ll.head;
+	while (current) {
+		length++;
+		current = current.next;
+	}
+	return length;
+}
+
+
 function intersect(ll1, ll2) {
-  if (!ll1.head || !ll2.head) return false;
-  let nodes1 = [];
-  let nodes2 = [];
-  
-  let current1 = ll1.head;
-  let current2 = ll2.head;
-  
-  while (current1 || current2) {
-    if (current1) {
-      nodes1.push(current1); 
-      if (nodes1.indexOf(current2) > -1) {
-        return current2;
-      } else {
-        current1 = current1.next;
-      }
-    }
-    
-    if (current2) {
-      nodes2.push(current2);
-      if (nodes2.indexOf(current1) > -1) {
-        return current1;
-      } else {
-        current2 = current2.next;
-      }
-    }
-  }
-  return false;
+	let length1 = getLength(ll1);
+	let length2 = getLength(ll2);
+	let difference = Math.abs(length1 - length2);
+	let long;
+	let short;
+	if (length1  > length2) {
+		long = ll1.head;
+		short = ll2.head;
+	} else {
+		long = ll2.head;
+		short = ll1.head;
+	}
+		
+	
+	while (difference) {
+		long = long.next;
+		difference--;
+	}
+
+	while (long) {
+		if (long === short) {
+			return short;
+		} else {
+			long = long.next;
+			short = short.next;
+		}
+	}
+
+	return false;
 }
 
 let n1 = new Node(1);

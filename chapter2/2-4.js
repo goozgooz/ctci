@@ -11,40 +11,40 @@
 
 const {LinkedList, Node} = require('../lib/linkedlist');
 
-LinkedList.prototype.partition = function(x) {
-  if (!this.head) return null;
+// LinkedList.prototype.partition = function(x) {
+//   if (!this.head) return null;
   
-  let leftHead = null;
-  let left = null;
-  let rightHead = null;
-  let right = null;
+//   let leftHead = null;
+//   let left = null;
+//   let rightHead = null;
+//   let right = null;
   
-  let current = this.head;
-  while (current) {
-    if (current.data < x) {
-      if (!leftHead) {
-        leftHead = current;
-        left = leftHead;
-      } else {
-        left.next = current; 
-        left = left.next;
-      }
-    } else {
-      if (!rightHead) {
-        rightHead = current;
-        right = rightHead;
-      } else {
-        right.next = current;
-        right = right.next;
-      }
-    }
-    current = current.next;
-  }
-  left.next = rightHead;
-  right.next = null;
+//   let current = this.head;
+//   while (current) {
+//     if (current.data < x) {
+//       if (!leftHead) {
+//         leftHead = current;
+//         left = leftHead;
+//       } else {
+//         left.next = current; 
+//         left = left.next;
+//       }
+//     } else {
+//       if (!rightHead) {
+//         rightHead = current;
+//         right = rightHead;
+//       } else {
+//         right.next = current;
+//         right = right.next;
+//       }
+//     }
+//     current = current.next;
+//   }
+//   left.next = rightHead;
+//   right.next = null;
   
-  return leftHead;
-}
+//   return leftHead;
+// }
 
 let ll = new LinkedList();
 ll.insert(5);

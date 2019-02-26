@@ -1,29 +1,27 @@
 // zero matrix
-function zeroMatrix(matrix) {
-	let row = Array(matrix.length).fill(false);
-	let column = Array(matrix[0].length).fill(false);
+// function zeroMatrix(matrix) {
+// 	let row = Array(matrix.length).fill(false);
+// 	let column = Array(matrix[0].length).fill(false);
 
-	for (let i = 0; i < row.length; i++) {
-		for (let j = 0; j < column.length; j++) {
-			if (matrix[i][j] === 0) {
-				row[i] = true;
-				column[j] = true;
-			}
-		}
-	}
-  console.log(row, column);
-	for (let i = 0; i < row.length; i++) {
-		for (let j = 0; j < column.length; j++) {
-			if (row[i] || column[j]) {
-				matrix[i][j] = 0;
-			}
-		}
-	}
+// 	for (let i = 0; i < row.length; i++) {
+// 		for (let j = 0; j < column.length; j++) {
+// 			if (matrix[i][j] === 0) {
+// 				row[i] = true;
+// 				column[j] = true;
+// 			}
+// 		}
+// 	}
+//   
+// 	for (let i = 0; i < row.length; i++) {
+// 		for (let j = 0; j < column.length; j++) {
+// 			if (row[i] || column[j]) {
+// 				matrix[i][j] = 0;
+// 			}
+// 		}
+// 	}
 
-	return matrix;
-}
-
-
+// 	return matrix;
+// }
 
 
 const matrix =[

@@ -30,7 +30,7 @@
    
 //   return true;
 // }
- 
+
  console.log(
   palPerm('taco cat') === true,
   palPerm('atco cat') === true,
