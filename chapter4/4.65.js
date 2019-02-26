@@ -24,7 +24,6 @@ var BSTp = function(value) {
 //     return p;
 //   }
 // }
-
 /* TEST */
 var a = new BSTp(10);
 var b = new BSTp(2);

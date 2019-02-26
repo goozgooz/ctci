@@ -60,7 +60,6 @@ class Graph {
   //   }
   //   return false;
   // }
-  
 }
 
 let graph = new Graph();

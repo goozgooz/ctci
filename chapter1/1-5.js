@@ -13,33 +13,32 @@
 // Time: O(n)
 // Space: O(1)
  
-function oneAway(str1, str2) {
-  if (Math.abs(str1.length - str2.length) > 1) return false;
+// function oneAway(str1, str2) {
+//   if (Math.abs(str1.length - str2.length) > 1) return false;
   
-  let maxLength = Math.max(str1.length, str2.length);
-  let edits = 0;
+//   let maxLength = Math.max(str1.length, str2.length);
+//   let edits = 0;
   
-  for (let i = 0, j = 0; i < maxLength || j < maxLength; i++, j++){
-    let char1 = str1[i];
-    let char2 = str2[j];
+//   for (let i = 0, j = 0; i < maxLength || j < maxLength; i++, j++){
+//     let char1 = str1[i];
+//     let char2 = str2[j];
     
-    if (char1 !== char2) {
-      edits++;
+//     if (char1 !== char2) {
+//       edits++;
       
-      if (edits > 1) {
-        return false;
-      }
+//       if (edits > 1) {
+//         return false;
+//       }
         
-      if (char1 === str2[j+1]) {
-        j++;
-       } else if (str1[i+1] === char2) {
-        i++;
-      }
-    }
-  }
+//       if (char1 === str2[j+1]) {
+//         j++;
+//       } else if (str1[i+1] === char2) {
+//         i++;
+//       }
+//     }
+//   }
   
-  return true;
-}
+//   return true;
 
 console.log(oneAway('pale', 'ple'), true);
 console.log(oneAway('pales', 'pale'), true);

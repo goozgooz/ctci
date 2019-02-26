@@ -38,21 +38,21 @@
 // 	return pairs;
 // }
 
-function sumPairs(arr, target) {
-	let pairs = [];
-	let matches = {};
+// function sumPairs(arr, target) {
+// 	let pairs = [];
+// 	let matches = {};
 
-	for (let num of arr) {
-		if (matches[num]) {
-			pairs.push([num, matches[num]]);
-		} else {
-			let compliment = target - num;
-			matches[compliment] = num;
-		}
-	}
+// 	for (let num of arr) {
+// 		if (matches[num]) {
+// 			pairs.push([num, matches[num]]);
+// 		} else {
+// 			let compliment = target - num;
+// 			matches[compliment] = num;
+// 		}
+// 	}
 
-	return pairs;
-}
+// 	return pairs;
+// }
 
 let arr = [2,4,6,1,3,5];
 console.log(sumPairs(arr, 7))

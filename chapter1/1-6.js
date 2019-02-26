@@ -9,20 +9,20 @@
 // Time: O(n);
 // Space: O(n);
 
-function stringCompression(str) {
-  let compressed = '';
-  let count = 1;
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === str[i+1]) {
-      count++;
-    } else {
-      compressed += (str[i] + count);
-      count = 1;
-    }
-  }
+// function stringCompression(str) {
+//   let compressed = '';
+//   let count = 1;
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === str[i+1]) {
+//       count++;
+//     } else {
+//       compressed += (str[i] + count);
+//       count = 1;
+//     }
+//   }
 
-  return compressed.length < str.length ? compressed : str;
-}
+//   return compressed.length < str.length ? compressed : str;
+// }
 
 console.log(
   stringCompression('aabcccccaaa') === 'a2b1c5a3',
