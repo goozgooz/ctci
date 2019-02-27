@@ -86,9 +86,24 @@ class DLL {
 
 		current = current.next;
 	}
-
-	return console.log('that data does not exist in the list');
-}
+		return console.log('that data does not exist in the list');
+	}
+	
+	reverse(){
+		if (!this.head) return;
+		this.tail = this.head;
+		let current = this.head;
+		while (current) {
+			let temp = current.previous;
+			current.previous = current.next;
+			current.next = temp;
+			if (!current.previous) {
+				return this.head = current;
+			} else {
+				current = current.previous;
+			}
+		}
+	}
 	
 
 	print(){
@@ -99,6 +114,7 @@ class DLL {
 		}
 	}
 }
+
 
 let test = new DLL();
 test.insertFirst(3);
@@ -120,3 +136,12 @@ console.log('\ntesting insert after');
 test.insertAfter(1,69);
 test.insertAfter(5,69);
 test.print();
+
+console.log('\n reversing');
+let dll = new DLL();
+dll.insertLast(1);
+dll.insertLast(2);
+dll.insertLast(3);
+dll.insertLast(4);
+dll.reverse();
+dll.print();
