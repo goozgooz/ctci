@@ -26,7 +26,6 @@ class Queue {
 	}
 }
 
-
 class AnimalShelter {
 	constructor() {
 		this.dogs = new Queue();
