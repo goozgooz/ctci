@@ -27,7 +27,6 @@ class Graph {
     if(!this.nodes[node][edge]) return console.log('edge does not exist');
     delete this.nodes[node][edge];
   }
-	
   // checkRoute(node1, node2) {
   //   const q1 = [node1];
   //   const visited1 = {[node1]: true};
@@ -61,6 +60,7 @@ class Graph {
   //   return false;
   // }
 }
+			
 
 let graph = new Graph();
 graph.addNode('A');

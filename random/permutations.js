@@ -18,4 +18,6 @@
 // 	return results;
 // }
 
+
+
 console.log(permutations('abc'));

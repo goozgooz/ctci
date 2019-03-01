@@ -10,7 +10,7 @@ class DLL {
 	constructor() {
 		this.head = null;
 		this.tail = null;
-	}
+	}	
 
 	insertFirst(data) {
 		let newNode = new Node(data);
@@ -88,6 +88,7 @@ class DLL {
 	}
 		return console.log('that data does not exist in the list');
 	}
+		
 	
 	reverse(){
 		if (!this.head) return;
@@ -104,7 +105,8 @@ class DLL {
 			}
 		}
 	}
-	
+
+
 
 	print(){
 		let current = this.head;
