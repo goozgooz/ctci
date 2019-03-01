@@ -1,16 +1,18 @@
 const {LinkedList} = require('../lib/linkedlist');
 
 LinkedList.prototype.reverse = function() {
-  if (!this.head) return;
-	let prev = null;
+	if (!this.head) return;
 	let current = this.head;
+	let previous = null;
+	let next = current.next;
 	while (current) {
-		let temp = current.next;
-		current.next = prev;
-		prev = current;
-		current = temp;
+		next = current.next;
+		current.next = previous;
+		previous = current;
+		current = next;
 	}
-	return this.head = prev;
+
+	return this.head = previous;
 }
 
 let test = new LinkedList();

@@ -1,15 +1,15 @@
-function fib(n) {
-  let results = [];
-  for (let i = 0; i <= n; i++) {
-    if (i < 2) {
-      results.push(i);
-    } else {
-      results.push(results[i-1] + results[i-2]);
-    }
-  }
+// function fib(n) {
+//   let results = [];
+//   for (let i = 0; i <= n; i++) {
+//     if (i < 2) {
+//       results.push(i);
+//     } else {
+//       results.push(results[i-1] + results[i-2]);
+//     }
+//   }
   
-  return results[n];
-}
+//   return results[n];
+// }
 
 function recursiveFib(n) {
   if (n < 2) return n;
