@@ -1,18 +1,30 @@
 const BST = require('../lib/bst');
 
-function lca(root, node1, node2) {
-	if (!root) return null;
-	let current = root;
-	while (current) {
-		if (current.data > node1 && current.data > node2) {
-			current = current.left;
-		} else if (current.data < node1 && current.data < node2) {
-			current = current.right;
-		} else {
-			return current;
-		}
-	}
-}
+// function lca(root, node1, node2) {
+// 	if (!root) return null;
+// 	let current = root;
+// 	while (current) {
+// 		if (current.data > node1 && current.data > node2) {
+// 			current = current.left;
+// 		} else if (current.data < node1 && current.data < node2) {
+// 			current = current.right;
+// 		} else {
+// 			return current;
+// 		}
+// 	}
+// }
+// function lca(bst, node1, node2) {
+// 	if (!bst) return null;
+// 	if (bst.data > node1 && bst.data > node2) {
+// 		return lca(bst.left, node1, node2);
+// 	} 
+
+// 	if (bst.data < node2 && bst.data < node1) {
+// 		return lca(bst.right, node1, node2);
+// 	}
+
+// 	return bst;
+// }
 
 let test = new BST(30);
 test.insert(15);
