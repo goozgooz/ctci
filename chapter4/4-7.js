@@ -31,29 +31,29 @@ function createGraph(projects, dependencies) {
   return graph;
 }
 
-function buildOrder(projects, dependencies) {
-  let graph = createGraph(projects, dependencies);
-  let order = [];
-  let visited = {};
+// function buildOrder(projects, dependencies) {
+//   let graph = createGraph(projects, dependencies);
+//   let order = [];
+//   let visited = {};
 
-  for (let node in graph) {
-    if (!visited[node]) {
-      topSort(node, order, visited, graph);
-    }
-  }
+//   for (let node in graph) {
+//     if (!visited[node]) {
+//       topSort(node, order, visited, graph);
+//     }
+//   }
 
-  return order;
-}
+//   return order;
+// }
 
-function topSort(node, order, visited, graph) {
-  visited[node] = true;
-  for (let d in graph[node]) {
-    if (!visited[d]) {
-      topSort(d, order, visited, graph);
-    }
-  }
-  order.push(node);
-}
+// function topSort(node, order, visited, graph) {
+//   visited[node] = true;
+//   for (let d in graph[node]) {
+//     if (!visited[d]) {
+//       topSort(d, order, visited, graph);
+//     }
+//   }
+//   order.push(node);
+// }
 
 const projects = ['a', 'b', 'c', 'd', 'e', 'f'];
 const dependencies = [['a', 'd'], ['f', 'b'], ['b', 'd'], ['f', 'a'], ['d', 'c']];
