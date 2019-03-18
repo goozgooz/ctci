@@ -12,9 +12,9 @@
  // Time: O(n)
  // Space: O(n)
  
-function urlify(str) {
-  return str.split('').map(letter => letter === ' ' ? '%20' : letter).join('');
-}
+// function urlify(str) {
+//   // return str.split('').map(letter => letter === ' ' ? '%20' : letter).join('');
+// }
 
 console.log(urlify('hello what are you doing?'))
  

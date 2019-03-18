@@ -89,23 +89,21 @@ class DLL {
 		return console.log('that data does not exist in the list');
 	}
 		
-	
-	reverse(){
-		if (!this.head) return;
-		this.tail = this.head;
-		let current = this.head;
-		while (current) {
-			let temp = current.previous;
-			current.previous = current.next;
-			current.next = temp;
-			if (!current.previous) {
-				return this.head = current;
-			} else {
-				current = current.previous;
-			}
-		}
-	}
-
+	// reverse(){
+	// 	if (!this.head) return;
+	// 	this.tail = this.head;
+	// 	let current = this.head;
+	// 	while (current) {
+	// 		let temp = current.previous;
+	// 		current.previous = current.next;
+	// 		current.next = temp;
+	// 		if (!current.previous) {
+	// 			return this.head = current;
+	// 		} else {
+	// 			current = current.previous;
+	// 		}
+	// 	}
+	// }
 
 
 	print(){

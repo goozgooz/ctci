@@ -12,13 +12,6 @@
 
 const Stack = require('../lib/stack');
 
-// array of stacks
-// limit is passed to construcotr
-// current height
-// get last stack - push to it - height++
-//    if current height === limit -> initiliazie new stack at end. set height to 0
-// get last stack - pop item off - height-- : if 
-
 class SetOfStacks {
   constructor(limit) {
     this.stacks = [new Stack()];

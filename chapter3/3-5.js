@@ -7,22 +7,22 @@
  
 const Stack = require('../lib/stack');
 
-function sortStack(stack) {
-	let sorted = new Stack();
-	sorted.push(stack.pop());
+// function sortStack(stack) {
+// 	let sorted = new Stack();
+// 	sorted.push(stack.pop());
 
-	while ( stack.peek() ) {
-		let current = stack.pop();
+// 	while ( stack.peek() ) {
+// 		let current = stack.pop();
 
-		while ( sorted.peek() && sorted.peek() < current ) {
-			stack.push(sorted.pop());
-		}
+// 		while ( sorted.peek() && sorted.peek() < current ) {
+// 			stack.push(sorted.pop());
+// 		}
 
-		sorted.push(current);
-	}
+// 		sorted.push(current);
+// 	}
 
-	return stack.data = [...sorted.data];
-}
+// 	return stack.data = [...sorted.data];
+// }
 
 let test = new Stack();
 

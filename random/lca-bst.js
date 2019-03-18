@@ -25,6 +25,17 @@ const BST = require('../lib/bst');
 
 // 	return bst;
 // }
+function lca(bst, node1, node2) {
+	if (!bst) return null;
+	if (bst.data > node1 && bst.data > node2) {
+		return lca(bst.left, node1,node2);
+	} 
+	if (bst.data < node1 && bst.data < node2) {
+		return lca(bst.right, node1, node2);
+	}
+
+	return bst;
+}
 
 let test = new BST(30);
 test.insert(15);

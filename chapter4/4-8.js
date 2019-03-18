@@ -8,26 +8,26 @@ class Node {
   }
 }
 
-function lca(root, node1, node2) {
-  if (!root) return null;
-  if (root === node1 || root === node2) return root;
-  let left = lca(root.left, node1, node2);
-  let right = lca(root.right, node1, node2);
-  if (left && right) return root;
-  if (!left && !right) return null;
-  return left ? left : right;
-}
+// function lca(root, node1, node2) {
+//   if (!root) return null;
+//   if (root === node1 || root === node2) return root;
+//   let left = lca(root.left, node1, node2);
+//   let right = lca(root.right, node1, node2);
+//   if (left && right) return root;
+//   if (!left && !right) return null;
+//   return left ? left : right;
+// }
 
-function findNode(root, data){
-  let q = [root];
-  while (q.length) {
-    let current = q.shift();
-    if (current.data === data) return true;
-    if (current.left) q.push(current.left);
-    if (current.right) q.push(current.right);
-  }
-  return false;
-}
+// function findNode(root, data){
+//   let q = [root];
+//   while (q.length) {
+//     let current = q.shift();
+//     if (current.data === data) return true;
+//     if (current.left) q.push(current.left);
+//     if (current.right) q.push(current.right);
+//   }
+//   return false;
+// }
 
 let A = new Node(3);
 let B = new Node(6);
@@ -46,6 +46,7 @@ let H = new Node(13);
 let I = new Node(7);
 C.right = H;
 H.left = I;
+let troll = new Node(2);
 
 console.log(lca(A, B,C) === A);
 console.log(lca(A, D, G) === B);
