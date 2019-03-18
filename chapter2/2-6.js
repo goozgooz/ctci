@@ -26,6 +26,7 @@ function isPalindrome(ll) {
   return true;
 }
 
+
 let ll1 = new LinkedList();
 ll1.insert(1);
 ll1.insert(2);

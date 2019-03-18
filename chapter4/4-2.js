@@ -6,12 +6,6 @@
 
 const BST = require('../lib/bst');
 
-// function takes array, start, end
-// if start > end  retrun null - base
-// find middle array item. make that BST
-// make the left node of that a call to same function with start -> middle - 1
-// right is middle + 1 to end
-
 // function createBST(arr, start = 0, end = arr.length-1) {
 //   if (start > end) return;
 

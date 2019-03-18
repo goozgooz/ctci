@@ -17,19 +17,19 @@
 //for every directed edge uv, vertex u comes before v in the ordering.
  
 
-function createGraph(projects, dependencies) {
-  let graph = {};
+// function createGraph(projects, dependencies) {
+//   let graph = {};
 	
-  for (let p of projects) {
-    graph[p] = {};
-  }
+//   for (let p of projects) {
+//     graph[p] = {};
+//   }
 
-  for (let d of dependencies) {
-    graph[d[0]][d[1]] = true;
-  }
+//   for (let d of dependencies) {
+//     graph[d[0]][d[1]] = true;
+//   }
 
-  return graph;
-}
+//   return graph;
+// }
 
 // function buildOrder(projects, dependencies) {
 //   let graph = createGraph(projects, dependencies);

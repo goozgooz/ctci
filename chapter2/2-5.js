@@ -11,33 +11,28 @@ Output: 8 -> 0 -> 8
 const {LinkedList, Node} = require('../lib/linkedlist');
 
 function sumList(ll1, ll2) {
-  if (!ll1.head || !ll2.head) return;
-  let number1 = '';
-  let number2 = '';
-  
-  let current1 = ll1.head;
-  let current2 = ll2.head;
-  while (current1 || current2) {
-    if (current1) {
-      number1 = current1.data + number1;
-      current1 = current1.next;
-    }
-    
-    if (current2) {
-      number2 = current2.data + number2;
-      current2 = current2.next;
-    }
-  }
-  
-  
-  
-  let sum = parseInt(number1) + parseInt(number2);
-  let reversed = sum.toString().split('').reverse();
-  let newList = new LinkedList();
-  for (let num of reversed) {
-    newList.insert(num);
-  }
-  return newList;
+	let head = new LinkedList();
+	let carry = 0;
+	let node1 = ll1.head;
+	let node2 = ll2.head;
+	
+	while (node1 || node2) {
+		let x = node1 ? node1.data : 0;
+		let y = node2 ? node2.data: 0;
+		let sum = x + y + carry;
+		if (sum > 9) {
+			carry = 1;
+			sum = sum - 10;
+		}
+		head.insert(sum);
+		node1 = node1 ? node1.next : null;
+		node2 = node2 ? node2.next : null;
+	}
+	if (carry) {
+		head.insert(carry);
+	}
+
+	return head;
 }
 
 let list1 = new LinkedList();

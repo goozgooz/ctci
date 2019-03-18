@@ -15,6 +15,8 @@
 
 const BST = require('../lib/bst');
 
+// RunTime O(h) - height of the tree
+
 // function findNode(bst, data) {
 //   if (bst.data === data) return bst;
 //   let subtree = data < bst.data ? 'left' : 'right';
@@ -24,6 +26,7 @@ const BST = require('../lib/bst');
 //     return null;
 //   }
 // }
+
 // function getSuccessor(bst, data) {
 //   let node = findNode(bst,data);
 //   if (!node) return null;
@@ -49,6 +52,7 @@ const BST = require('../lib/bst');
 //   }
 // }
 
+
 let test = new BST(50);
 test.insert(60);
 test.insert(30);
@@ -66,3 +70,4 @@ console.log(getSuccessor(test, 10) === null);
 console.log(getSuccessor(test, 30).data === 33);
 console.log(getSuccessor(test, 60).data === 80);
 console.log(getSuccessor(test, 84) === null);
+console.log(getSuccessor(test, 1) === null);

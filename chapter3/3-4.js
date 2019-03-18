@@ -1,7 +1,6 @@
 /**
  * 3.4
  * Queue via Stacks: Implement a MyQueue class which implements a queue using two stacks.
- * In this question, I'v used javascript arrays and dealt with them as stacks
 */
 
 const Stack = require('../lib/stack');

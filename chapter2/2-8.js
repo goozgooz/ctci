@@ -16,12 +16,13 @@
  //     slow = slow.next;
  //     fast = fast.next.next;
  //     if (slow === fast) {
- //       return slow.next;
+ //       return true;
  //     }
  //   }
    
  //   return false;
  // }
+
 
 let ll = new LinkedList();
 let a = new Node(1);
@@ -39,4 +40,4 @@ console.log(isCircular(ll) === false)
 
 d.next = b;
 
-console.log(isCircular(ll) === b)
+console.log(isCircular(ll) === true)

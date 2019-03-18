@@ -5,7 +5,7 @@ var BSTp = function(value) {
   this.right = null;
   this.parent = null;
 };
-
+// RunTime O(h) - height of the tree
 // function findSuccessor(node){
 //   if (!node) return null;
 //   if (node.right) {
@@ -24,6 +24,7 @@ var BSTp = function(value) {
 //     return p;
 //   }
 // }
+
 /* TEST */
 var a = new BSTp(10);
 var b = new BSTp(2);

@@ -8,49 +8,49 @@
  
 const {LinkedList, Node} = require('../lib/linkedlist');
 
-function getLength(ll) {
-	let length = 0;
-	if (!ll.head) return length;
-	let current = ll.head;
-	while (current) {
-		length++;
-		current = current.next;
-	}
-	return length;
-}
+// function getLength(ll) {
+// 	let length = 0;
+// 	if (!ll.head) return length;
+// 	let current = ll.head;
+// 	while (current) {
+// 		length++;
+// 		current = current.next;
+// 	}
+// 	return length;
+// }
 
-
-function intersect(ll1, ll2) {
-	let length1 = getLength(ll1);
-	let length2 = getLength(ll2);
-	let difference = Math.abs(length1 - length2);
-	let long;
-	let short;
-	if (length1  > length2) {
-		long = ll1.head;
-		short = ll2.head;
-	} else {
-		long = ll2.head;
-		short = ll1.head;
-	}
+// function intersect(ll1, ll2) {
+// 	let length1 = getLength(ll1);
+// 	let length2 = getLength(ll2);
+// 	let difference = Math.abs(length1 - length2);
+// 	let long;
+// 	let short;
+// 	if (length1  > length2) {
+// 		long = ll1.head;
+// 		short = ll2.head;
+// 	} else {
+// 		long = ll2.head;
+// 		short = ll1.head;
+// 	}
 		
 	
-	while (difference) {
-		long = long.next;
-		difference--;
-	}
+// 	while (difference) {
+// 		long = long.next;
+// 		difference--;
+// 	}
 
-	while (long) {
-		if (long === short) {
-			return short;
-		} else {
-			long = long.next;
-			short = short.next;
-		}
-	}
+// 	while (long) {
+// 		if (long === short) {
+// 			return short;
+// 		} else {
+// 			long = long.next;
+// 			short = short.next;
+// 		}
+// 	}
 
-	return false;
-}
+// 	return false;
+// }
+
 
 let n1 = new Node(1);
 let n2 = new Node(2);
